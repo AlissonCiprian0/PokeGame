@@ -6,7 +6,7 @@ const Pokecard = ({pokemon, image, selectable, selectorCounter, setSelectorCount
 
     const handlePokeCardClick = () => {
         if (selectable === true) {
-            if (location == 'http://localhost:3000/') {
+            if (!location.includes('/battle')) {
                 if (statePokemon.selected === true) {
                     setStatePokemon({...statePokemon, selected: false});
                     setSelectorCounter(selectorCounter = selectorCounter - 1);
@@ -39,7 +39,7 @@ const Pokecard = ({pokemon, image, selectable, selectorCounter, setSelectorCount
                     setStatePokemon({...statePokemon, selected: false});
                     setSelectorCounter(selectorCounter = selectorCounter - 1);
     
-                    setHand1(hand1.filter(item => item.id !== statePokemon.id));
+                    setHand2(hand2.filter(item => item.id !== statePokemon.id));
                     
                     setContMessage('Choose one more pokemon!');
                 }
