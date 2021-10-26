@@ -19,7 +19,7 @@ const Selector = ({baseAPI, pokemons}) => {
     });
 
     const handleButtonClick = () => {
-        if (!location.includes('/battle')) {
+        if (location.includes('/battle')) {
             setHand1(hand1.shift());
             
             let localHand1 = JSON.stringify(hand1);
