@@ -1,6 +1,9 @@
 :robot: under development :robot:
 ---------------------------------
 
+[Poke Battle Game](https://6178897de23c8c00087003ca--sad-shirley-ac6d59.netlify.app/)
+======================================================================================
+
 A Pokemon Battle simulator game made in React for studying purposes.
 
 Used technologies
@@ -45,6 +48,10 @@ How to run
 *   Extract project folder if needed
 *   Go to the project folder and open a terminal emulator (Gnome Terminal, CMD...)
 *   Type 'npm start' and hit enter
+
+### or
+
+[Click-me!](https://6178897de23c8c00087003ca--sad-shirley-ac6d59.netlify.app/)
 
 ### Credits
 
