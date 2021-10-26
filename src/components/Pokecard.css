@@ -62,3 +62,10 @@
 .Pokecard.selected .selector {
     transform: inherit;
 }
+
+@media (max-width: 650px) {
+    .Pokecard {
+        margin: 15px 6vw;
+        min-width: 38vw;
+    }
+}

@@ -34,7 +34,6 @@
 @media (max-width: 650px) {
     .Selector {
         position: relative;
-        padding-top: 115px;
-        padding-bottom: 50px;
+        padding: 115px 0 50px 0;
     }
 }
