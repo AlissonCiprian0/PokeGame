@@ -1,0 +1,19 @@
+.Player {
+    position: absolute;
+    z-index: 10;
+    padding: 25px;
+    left: 10vw;
+    top: 0;
+    background-color: #00bde7;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 0 0 5px 5px;
+}
+
+@media (max-width: 650px) {
+    .Player {
+        right: 10vw;
+        text-align: center;
+    }
+}

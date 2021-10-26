@@ -1,0 +1,40 @@
+.Selector {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 8vw;
+    background-color: #e1e1e1;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.Selector h1 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.selector-pokemon-list {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+}
+.Selector-counter {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 650px) {
+    .Selector {
+        position: relative;
+        padding-top: 115px;
+        padding-bottom: 50px;
+    }
+}

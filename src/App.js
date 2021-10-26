@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import {baseAPI, pokemons} from "./API";
+import Selector from "./components/Selector";
+import Pokegame from "./components/Pokegame";
+import Player from "./components/Player";
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+      <Route
+          path="/"
+          exact
+          render={() => (
+            <>
+              <Selector baseAPI={baseAPI} pokemons={pokemons} />
+              <Player> Player 1 </Player>
+            </>
+          )}
+      />
+
+      <Route
+          path="/oponents-choise"
+          exact
+          render={() => (
+            <>
+              <Selector baseAPI={baseAPI} pokemons={pokemons} />
+              <Player> Player 2 </Player>
+            </>
+          )}
+      />
+
+      <Route
+          path="/battle"
+          exact
+          render={() => (
+            <>
+              <Pokegame baseAPI={baseAPI} hand1={JSON.parse(localStorage.getItem("hand1"))} hand2={JSON.parse(localStorage.getItem("hand2"))} />
+            </>
+          )}
+        />
+      </div>
+    </Router>
   );
 }
 
