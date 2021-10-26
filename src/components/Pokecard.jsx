@@ -6,7 +6,7 @@ const Pokecard = ({pokemon, image, selectable, selectorCounter, setSelectorCount
 
     const handlePokeCardClick = () => {
         if (selectable === true) {
-            if (!location.includes('/battle')) {
+            if (!location.includes('/battle') && !location.includes('/oponents-choise')) {
                 if (statePokemon.selected === true) {
                     setStatePokemon({...statePokemon, selected: false});
                     setSelectorCounter(selectorCounter = selectorCounter - 1);

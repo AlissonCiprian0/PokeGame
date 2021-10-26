@@ -28,7 +28,7 @@ const Selector = ({baseAPI, pokemons}) => {
             history.push('/oponents-choise');
         }
         else if (location.includes('/oponents-choise')) {
-            setHand1(hand2.shift());
+            setHand2(hand2.shift());
             
             let localHand2 = JSON.stringify(hand2);
             localStorage.setItem('hand2', localHand2);
